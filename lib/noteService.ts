@@ -1,6 +1,6 @@
 import axios from 'axios';
 const url = 'https://notehub-public.goit.study/api/notes';
-const authToken = import.meta.env.VITE_NOTEHUB_TOKEN;
+const authToken = process.env.NEXT_PUBLIC_NOTEHUB_TOKEN;
 import type { Note , CreateNoteType} from '../types/note';
 
 interface NotesQuery{
@@ -40,4 +40,13 @@ export async function deleteNote(id: string) : Promise<Note>{
         },
     })
     return data;
+}
+
+export async function fetchNotesById(id: string): Promise<Note> {
+  const { data } = await axios.get<Note>(`${url}/${id}`, {
+    headers: {
+      Authorization: `Bearer ${authToken}`,
+    },
+  });
+  return data;
 }

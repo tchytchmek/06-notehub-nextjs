@@ -1,17 +1,19 @@
-import css from "./App.module.css";
-import { fetchNotes } from "@/services/noteService";
-import SearchBox from "../SearchBox/SearchBox";
-import NoteList from "../NoteList/NoteList";
+'use client'
+
+import css from "./Notes.module.css";
+import { fetchNotes } from "@/lib/noteService";
+import SearchBox from "@/components/SearchBox/SearchBox";
+import NoteList from "@/components/NoteList/NoteList";
 import { useQuery, keepPreviousData } from "@tanstack/react-query";
 import { useState } from "react";
-import Pagination from "../Pagination/Pagination";
-import Modal from "../Modal/Modal";
+import Pagination from "@/components/Pagination/Pagination";
+import Modal from "@/components/Modal/Modal";
 import { useDebounce } from "use-debounce";
-import ErrorMessage from "../ErrorMessage/ErrorMessage";
-import Loader from "../Loader/Loader";
-import NoteForm from "../NoteForm/NoteForm";
+import ErrorMessage from "@/components/ErrorMessage/ErrorMessage";
+import Loader from "@/components/Loader/Loader";
+import NoteForm from "@/components/NoteForm/NoteForm";
 
-function App() {
+function NotesClient() {
   const [currentPage, setCurrentPage] = useState(1);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [text, setText] = useState("");
@@ -56,4 +58,4 @@ function App() {
   );
 }
 
-export default App;
+export default NotesClient;
