@@ -1,9 +1,8 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+
 import "./globals.css";
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
-import TanstackProvider from "@/components/TanStackProvider/TanStackProvider";
+import TanstackProvider from '@/components/TanStackProvider/TanstackProvider';
 
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
