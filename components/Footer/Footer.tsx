@@ -11,7 +11,7 @@ export default function Footer(){
       <p>Developer: Yaroslav Obozov</p>
       <p>
         Contact us:
-        <a href="<mailto:student@notehub.app>">student@notehub.app</a>
+        <a href="mailto:student@notehub.app">student@notehub.app</a>
       </p>
     </div>
   </div>
