@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
-import TanstackProvider from "@/components/TanstackProvider/TanstackProvider";
+import TanstackProvider from "@/components/TanStackProvider/TanStackProvider";
 
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
